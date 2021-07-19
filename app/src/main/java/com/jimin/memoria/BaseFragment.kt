@@ -10,5 +10,6 @@ open class BaseFragment: Fragment(), View.OnClickListener,BaseDialog.BaseDialogC
 
     override fun onOKClicked() {
 
+        
     }
 }
