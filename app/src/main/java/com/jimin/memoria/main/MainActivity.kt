@@ -1,12 +1,16 @@
 package com.jimin.memoria.main
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.jimin.memoria.BaseActivity
-import com.jimin.memoria.R
+import com.jimin.memoria.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity() {
+    private lateinit var binding: ActivityMainBinding
+
+    val tabNames = listof("HOME","MEMO","SET")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding= ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 }

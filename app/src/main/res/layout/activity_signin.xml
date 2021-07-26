@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/memo_paper">
+
+    <ImageView
+        android:id="@+id/signin_logo_iv"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:src="@drawable/memoria"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="45dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/signin_id_tl"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signin_logo_iv"
+        android:layout_marginTop="100dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signin_id_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID"
+            android:background="#00FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/signin_pw_tl"
+        app:passwordToggleEnabled="true"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signin_id_tl"
+        android:layout_marginTop="16dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signin_pw_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PASSWORD"
+            android:background="#00FFFFFF"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/signin_bt"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signin_pw_tl"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="200dp"
+        android:gravity="center"
+        android:background="@drawable/bg_signin_login_bt"
+        android:text="LOGIN"
+        android:textColor="@color/signin_tx"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/signin_line_view"
+        android:layout_width="400dp"
+        android:layout_height="0.5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signin_bt"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:background="@color/black"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/signin_signup_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signin_line_view"
+        android:layout_marginTop="50dp"
+        android:text="회원이 아니시라면?"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/signin_signup_bt"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signin_signup_tv"
+        android:gravity="center"
+        android:background="#00ff0000"
+        android:text="회원가입"
+        android:textColor="@color/signin_tx"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+</androidx.constraintlayout.widget.ConstraintLayout>

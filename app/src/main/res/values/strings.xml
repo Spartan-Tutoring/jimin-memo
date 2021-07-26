@@ -1,6 +1,14 @@
 <resources>
-    <string name="app_name">Template</string>
+    <string name="app_name">Memoria</string>
     <string name="network_error"><strong>네트워크 연결 끊김</strong>\n연결 상태 확인 후 다시 이용해 주세요🙏</string>
     <string name="dialog_base_check">확인</string>
     <string name="dialog_base_cancel">취소</string>
+
+    <!--splash-->
+    <string name="splash_logo_cd">logo image</string>
+    <!--signin-->
+    <string name="signin_id_tv">ID</string>
+    <string name="signin_pw_tv">PASSWORD</string>
+
+
 </resources>

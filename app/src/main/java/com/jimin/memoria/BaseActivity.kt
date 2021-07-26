@@ -9,6 +9,11 @@ open class BaseActivity : AppCompatActivity(), View.OnClickListener,BaseDialog.B
     override fun onClick(v: View?) {
 
     }
+    fun showDialog(title : String) {
+        val dig = BaseDialog(this)
+        dig.listener=this
+        dig.show(title)
+    }
 
     override fun onOKClicked() {
 
