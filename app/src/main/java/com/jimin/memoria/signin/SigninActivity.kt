@@ -48,7 +48,7 @@ class SigninActivity: BaseActivity() {
         if(user == null) {
             Toast.makeText(this,"없는 회원정보 입니다",Toast.LENGTH_SHORT).show()
         } else {
-            val spf:SharedPreferences=this.getPreferences(MODE_PRIVATE)
+            val spf:SharedPreferences=this.getSharedPreferences("memoria",MODE_PRIVATE)
             val editor=spf.edit()
 
             editor.putInt("token",user.idx)
@@ -60,7 +60,7 @@ class SigninActivity: BaseActivity() {
     }
 
     private fun startMainActivity(name:String) {
-        val intent = Intent(this, MainActivity::class.java) //액티비티 이동 위한 객체
+        val intent = Intent(this@SigninActivity, MainActivity::class.java) //액티비티 이동 위한 객체
         startActivity(intent)
         finish()
     }

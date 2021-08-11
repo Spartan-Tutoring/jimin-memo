@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_item_memo_cl">
 
+    <TextView
+        android:id="@+id/item_memo_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="25sp"
+        android:layout_marginStart="30dp"
+        android:text="오늘의 메모"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/item_memo_content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_memo_title_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="30dp"
+        android:text="내용입니다람쥐"
+        android:textSize="20sp"
+        android:ems="5"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <ImageView
+        android:id="@+id/item_memo_bookmark_iv"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:src="@drawable/bookmark_n"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="30dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
